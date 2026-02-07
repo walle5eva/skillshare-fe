@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -o openapi.json "skillshare-app-drgr4.ondigitalocean.app/openapi.json"
+curl -o openapi.json "https://skillshare-app-drgr4.ondigitalocean.app/openapi.json"
 python3 openapi_client_util.py
 openapi-generator-cli generate -i openapi_modified.json -g typescript-axios -o ./api
 rm openapi.json openapi_modified.json
