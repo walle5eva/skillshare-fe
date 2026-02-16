@@ -39,6 +39,7 @@ export interface SessionCreateRequest {
     'location': string;
     'start_time': string;
     'end_time': string;
+    'date': string;
     'capacity': number;
     'price': number;
 }
@@ -49,6 +50,7 @@ export interface SessionCreateResponse {
     'location': string;
     'start_time': string;
     'end_time': string;
+    'date': string;
     'capacity': number;
     'price': number;
     'id': string;
@@ -61,6 +63,7 @@ export interface SessionUpdateRequest {
     'title': string;
     'description': string;
     'skill_category': string;
+    'date': string;
     'location': string;
     'start_time': string;
     'end_time': string;
