@@ -16,6 +16,7 @@ export interface UserRegister {
   firstName: string
   lastName: string
   username: string
+  bio?: string
 }
 
 interface AuthContextType {
@@ -64,12 +65,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const onRegister = async (credentials: UserRegister): Promise<void> => {
     const api = new UsersApi()
     try {
+      const normalizedBio = credentials.bio?.trim()
       await api.registerUser({
         first_name: credentials.firstName,
         last_name: credentials.lastName,
         username: credentials.username,
         email: credentials.email,
         password: credentials.password,
+        bio: normalizedBio ? normalizedBio : null,
       })
 
       const response = await api.loginUser({

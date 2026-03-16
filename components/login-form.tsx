@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
 import { BookOpen, Users, ArrowRight, Loader2, Eye, EyeOff, CheckCircle2 } from "lucide-react"
 
 export function LoginForm() {
@@ -30,6 +31,7 @@ export function LoginForm() {
     firstName: "",
     lastName: "",
     username: "",
+    bio: "",
   })
 
   const handleLoginSubmit = async (e: FormEvent) => {
@@ -131,6 +133,21 @@ export function LoginForm() {
                   setRegisterForm((prev) => ({ ...prev, username: e.target.value }))
                 }
                 className="border-border bg-card text-foreground placeholder:text-muted-foreground focus-visible:ring-primary"
+              />
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <Label htmlFor="registerBio" className="text-foreground">
+                Bio (optional)
+              </Label>
+              <Textarea
+                id="registerBio"
+                placeholder="Tell classmates a little about yourself."
+                value={registerForm.bio ?? ""}
+                onChange={(e) =>
+                  setRegisterForm((prev) => ({ ...prev, bio: e.target.value }))
+                }
+                className="min-h-[96px] border-border bg-card text-foreground placeholder:text-muted-foreground focus-visible:ring-primary"
               />
             </div>
 
