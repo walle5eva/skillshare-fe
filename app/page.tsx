@@ -1,12 +1,5 @@
-"use client"
-
-import { AuthProvider } from "@/context/auth-context"
-import { LoginPage } from "@/components/login-page"
+import { LandingPage } from "@/components/landing-page"
 
 export default function Page() {
-  return (
-    <AuthProvider>
-      <LoginPage />
-    </AuthProvider>
-  )
+  return <LandingPage />
 }
