@@ -1,5 +1,5 @@
 // lib/recommendation.worker.ts
-import { Session, SkillCategory } from "./mock-sessions";
+import { Session, SkillCategory } from "../tests/mocks/mock-sessions";
 
 // Listen for messages from the main React app
 self.addEventListener("message", (event) => {

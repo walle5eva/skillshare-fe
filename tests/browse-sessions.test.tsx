@@ -1,7 +1,7 @@
 // __tests__/browse-sessions.test.tsx
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import BrowseSessions from '@/app/page';
-import { MOCK_SESSIONS } from '@/lib/mock-sessions';
+import { MOCK_SESSIONS } from '@/tests/mocks/mock-sessions';
 import '@testing-library/jest-dom';
 
 // Mock the Next.js router and Web Worker

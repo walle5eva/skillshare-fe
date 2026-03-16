@@ -2,9 +2,9 @@
 
 import { useState, useMemo, useEffect, useRef } from "react";
 import { Sparkles, Wifi, WifiOff, ShieldCheck, Ticket } from "lucide-react";
-import type { SkillCategory, Session } from "@/lib/mock-sessions";
-import { MOCK_SESSIONS } from "@/lib/mock-sessions";
-import { mockUserInteractionVector } from "@/lib/mock-user";
+import type { SkillCategory, Session } from "@/tests/mocks/mock-sessions";
+import { MOCK_SESSIONS } from "@/tests/mocks/mock-sessions";
+import { mockUserInteractionVector } from "@/tests/mocks/mock-user";
 import { generateSecureTicket } from "@/lib/security";
 import { SiteHeader } from "@/components/site-header";
 import { SearchBar } from "@/components/search-bar";
